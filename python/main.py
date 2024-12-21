@@ -65,3 +65,14 @@ print("Features")
 print(x.head(5))
 print("Labels")
 print(y.head(5))
+
+np.random.seed(42)
+
+x = x.to_numpy()
+y = y.to_numpy()
+
+indices = np.arange(len(x))
+np.random.shuffle(indices)
+
+x = x[indices]
+y = y[indices]
