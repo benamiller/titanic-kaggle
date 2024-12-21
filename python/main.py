@@ -76,3 +76,9 @@ np.random.shuffle(indices)
 
 x = x[indices]
 y = y[indices]
+
+ratio = 0.8
+split_index = int(len(x) * ratio)
+
+x_train, x_test = x[:split_index], x[split_index:]
+y_train, y_test = x[:split_index], x[split_index:]
