@@ -55,3 +55,13 @@ print(df[df['Cabin'].isna()])
 # Embarked (Port of Embarkation)
 print('Embarked')
 print(df[df['Embarked'].isna()])
+
+print("~~~~~~~DATASETS~~~~~~~")
+
+x = df.drop(columns=['Survived'])
+y = df['Survived']
+
+print("Features")
+print(x.head(5))
+print("Labels")
+print(y.head(5))
